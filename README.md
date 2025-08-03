@@ -1,11 +1,11 @@
 
 ### Objectives
 ```
--	To evaluate the performance of DenseNet 121, ResNet 50, and VGG 16 models for image embedding across diverse visual domains.
--	To Assess the effectiveness of K-nearest neighbors algorithm in measuring image similarity using embeddings.
--	To Examine the performance of MAP@5 metric in evaluating the performance of image embedding models.
--	Explore the enhancement of model performance through the utilization of Stacking Ensemble Technique in image embedding task.
--	Investigate the effects of fine-tuning and hyperparameter tuning on the performance of deep CNN models and stacking ensemble technique.
+•	To evaluate the performance of DenseNet 121, ResNet 50, and VGG 16 models for image embedding across diverse visual domains.
+•	To Assess the effectiveness of K-nearest neighbors algorithm in measuring image similarity using embeddings.
+•	To Examine the performance of MAP@5 metric in evaluating the performance of image embedding models.
+•	Explore the enhancement of model performance through the utilization of Stacking Ensemble Technique in image embedding task.
+•	Investigate the effects of fine-tuning and hyperparameter tuning on the performance of deep CNN models and stacking ensemble technique.
 ```
  ### Project Structure
 ```
@@ -40,29 +40,37 @@ cifar10-image-embedding/
 - VGG16
 - Stacking Ensemble 
 
-## 📊 Evaluation Metric
-- **mAP@5 (mean Average Precision at 5)**
+### Evaluation Metric
+- mAP@5 (mean Average Precision at 5)
 
-## ⚙️ Requirements
-Install the necessary libraries with:
+### Requirements
+Install the necessary libraries 
 
-## 🚀 How to Run
-# Step 1: Preprocess and augment CIFAR-10 data
+### How to Run
+```
+1. Clone the Repository
+git clone https://github.com/RabiaMaqsood-01/Image-embedding-cifar10.git
+Navigate to the folder: cd Image-embedding-cifar10
+
+2. Install Requirements
+Install libraries from requirements.txt
+pip install -r requirements.txt
+
+3. Download Dataset
+Dataset: CIFAR-10 download from 'https://www.cs.toronto.edu/~kriz/cifar.html'
+Or load automatically via: from keras.datasets import cifar10
+
+4. Preprocessing
 python preprocessing.py
 
-# Step 2: Train individual models
+5. Datasplitting
+
+6. Train Models and Extract Embeddings
 python densenet121_model.py
 python resnet50_model.py
 python vgg16_model.py
 
-# Step 3: Combine embeddings using stacking
+7. Apply Stacking Ensemble
 python stacking_ensemble.py
+```
 
-## 🧪 Results
-
-| Model        | Training Accuracy | Test Accuracy | mAP@5 Score |
-|--------------|-------------------|---------------|-------------|
-| DenseNet121  | 85.48%            | 81.32%        | **83.71%**  |
-| ResNet50     | 82.44%            | 79.15%        | -           |
-| VGG16        | 85.54%            | 82.70%        | -           |
-| Stacking     | 92.86%            | 87.45%        | -           |
