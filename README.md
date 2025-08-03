@@ -24,11 +24,11 @@ cifar10-image-embedding/
 ├── requirements.txt              # List of Python libraries needed to run the code
 ├── README.md                     # Project overview, instructions, results, and visualizations
 │
-└── assets/                       #  Store graphs and images
-    ├── densenet_loss.png
-    ├── resnet_loss.png
-    ├── vgg_loss.png
-    └── clustering_visual.png
+└── assets/                       #  Store graphs 
+    ├── Densenet121_loss.png
+    ├── Resnet50_loss.png
+    ├── Vgg16_loss.png
+    └── Stacking Ensemble_loss.png
 ```
 ### Dataset
 - **CIFAR-10**: 60,000 32x32 color images.
