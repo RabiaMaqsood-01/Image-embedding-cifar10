@@ -12,26 +12,28 @@ This project explores the use of three deep CNN models (DenseNet121, ResNet50, V
 ```
  ### Project Structure
 ```
-cifar10-image-embedding/
+Image-embedding-cifar10/
 │
-├── preprocessing.py              # Loads CIFAR-10 dataset, applies normalization, splits & augmentations
+├── CNN Models/
+│   ├── data_preprocessing.py            # Loads CIFAR-10 dataset, applies normalization, splits & augmentations
+│   ├── Densenet121_Model.py             # Builds, trains, and extracts embeddings using DenseNet121
+│   ├── Resnet50_Model.py                # Builds, trains, and extracts embeddings using ResNet50
+│   ├── Vgg16_Model.py                   # Builds, trains, and extracts embeddings using VGG16
 │
-├── densenet121_model.py          # Builds, trains, and extracts embeddings using DenseNet121
-├── resnet50_model.py             # Builds, trains, and extracts embeddings using ResNet50
-├── vgg16_model.py                # Builds, trains, and extracts embeddings using VGG16
+├── Stacking Ensemble Technique/
+│   └── Stacking Ensemble Technique.py   # Combines features from models using Stacking Ensemble Technique
 │
-├── stacking_ensemble.py          # Combines features from models using Stacking Ensemble Technique
+├── Embeddings/
+│   └── Embeddings.csv                   # CSV file containing saved image embeddings
 │
-├── embeddings.csv                # CSV file containing saved image embeddings
+├── Images/                              # Loss graphs images for each model
+│   ├── Densenet121_loss.png
+│   ├── Resnet50_loss.png
+│   ├── Vgg16_loss.png
+│   └── Stacking Ensemble_loss.png       
 │
-├── requirements.txt              # List of Python libraries needed to run the code
-├── README.md                     # Project overview, instructions, results, and visualizations
-│
-└── assets/                       #  Store graphs 
-    ├── Densenet121_loss.png
-    ├── Resnet50_loss.png
-    ├── Vgg16_loss.png
-    └── Stacking Ensemble_loss.png
+├── requirements.txt                     # List of Python libraries needed to run the code
+└── README.md                            # Project overview, instructions, and visualizations
 ```
 ### Dataset
 - **CIFAR-10**: 60,000 32x32 color images.
